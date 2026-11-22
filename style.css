@@ -1,20 +1,20 @@
 .space-r {
-  font-family: "Space Mono", monospace;
+  font-family: "IM Fell English", serif;
   font-weight: 400;
   font-style: normal;
 }
 .space-b {
-  font-family: "Space Mono", monospace;
+  font-family: "IM Fell English", serif;
   font-weight: 700;
   font-style: normal;
 }
 .space-r-i {
-  font-family: "Space Mono", monospace;
+  font-family: "IM Fell English", serif;
   font-weight: 400;
   font-style: italic;
 }
 .space-b-i {
-  font-family: "Space Mono", monospace;
+  font-family: "IM Fell English", serif;
   font-weight: 700;
   font-style: italic;
 }
@@ -42,6 +42,7 @@ body {
   height: 100dvh; /* accounts for mobile browser address bar showing/hiding */
   display: flex;
   flex-direction: column;
+  background: white url("https://texturelabs.org/wp-content/uploads/Texturelabs_Paper_248S.jpg") center / cover;
 }
 
 main {
@@ -57,11 +58,11 @@ main {
 }
 
 game {
-  color: #fff;
+  color: #111;
   display: block;
   justify-content: center;
   align-items: center;
-  background-color: #111;
+  
   font-size: 14px;
 }
 
@@ -70,7 +71,7 @@ game {
 }
 
 .blank {
-  font-family: "Space Mono", monospace;
+  font-family: "IM Fell English", serif;
   font-weight: 400;
   font-style: italic;
   padding-left: 5px;

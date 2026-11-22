@@ -7,7 +7,7 @@
     "verbing": ["fading", "mourning", "aching", "chilling", "cooling", "decaying", "dissolving", "echoing", "forsaking", "searching", "longing", "haunting", "lingering", "rotting", "wailing"],
     "good": ["comfort", "aid", "kiss", "love", "charm", "joy", "peace", "care", "glow", "tender", "kindness", "solace", "warmth"],
     "verbed": ["chilled", "bled", "frayed", "haunted", "lamented", "orphaned", "scarred", "splintered", "veiled", "withered", "wasted", "eroded"],
-    "deity": ["Ra", "Helios", "Selene", "Nika", "Chang'e", "Amaterasu"],
+    "deity": ["The Lady of Filth", "Helios", "Azhrarn", "Uhlume", "Ferris", "Chuz"],
     "weapon": ["sword", "bow & arrow", "flail", "shield", "scrying orb", "ancient tome", "staff", "glock", "wand", "chakram"],
     "place": [ "clouds", "gardens", "ether", "ruins", "memories", "asylums", "bastions", "castles", "catacombs", "chateaux", "citadels", "cosmos", "dimensions", "estates", "fortresses", "galaxies", "halls", "havens", "hearths", "hideaways", "homes", "keeps", "kingdoms", "labyrinths", "manors", "oases", "palaces", "planes", "planets", "realms", "refuges", "remnants", "sanctuaries", "shelters", "shrines", "spheres", "spires", "temples", "tombs", "universes", "wastelands", "worlds"],
   "groups": ["choirs", "flights", "covens", "collectives", "factions", "cabals", "packs", "houses", "mortals", "mans"],
@@ -21,7 +21,8 @@
     "action7" : ["continue", "rest"],
     "jewel" : ["amulet", "necklace", "ring", "earring", "bracelet", "locket", "medallion", "pendant"],
     "gift" : ["ball of fire", "+1 mending kit", "nothing", "pocket knife", "tiny marble"],
-    "name" : ["Egg", "Tuna", "Mars"]
+    "name" : ["Egg", "Tuna", "Mars"],
+    "colour": ["magenta", "wine", "blood", "pale orange", "aqua", "garnet", "rose", "caramel", "apricot", "gold", "emerald", "cyan", "teal", "ice", "lavender", "violet", "gunmetal"]
     
   },
 
@@ -72,7 +73,9 @@
   "rawBook":[
     "{name}, the leopard queen of {place}, stood at her window and watched {deity} walking about in the city. {deity} wore her yellow robe, for the sickness was a {adjective} fever, yellow as the dust that swirled up from the plains and cloaked the city of {place} and choked it, {adjective} as the {adjective} mud to which the wide river of {place} had turned. And {name}, powerless and angry, said within herself to the {deity}: “What must I do to be rid of you?” and the dimly seen {adjective} woman bared her teeth and grimaced as if she answered: “You know, but cannot do it.” And then the {adjective} storm folded her away and {name} slammed the window-shutters closed",
     "{deity}, a girl, a maiden, had woken in the hour before dawn. She had raised herself to observe the {adjective} {adjective} face of her lover. She had traced with her tongues tip the lids of his eyes, where the lashes lay among their shadows, {adjective} and long as if a {things} had drawn them there. Her joy and her delight in him had become so {adjective} as she gazed that she no longer needed him to share {things} with her. She had gone away among the trees to revel in her joy alone",
-    "She was not as he dreaded she might be, a hag—or worse. She was {adjective} and {adjective}, her bright hair streaming about her a few degrees {adjective} than her golden dress. Only her eyes were changeable and {adjective}, and, despite her words, she looked at him haughtily with them, so he thought it advisable to {action6}"
+    "She was not as he dreaded she might be, a hag—or worse. She was {adjective} and {adjective}, her bright hair streaming about her a few degrees {adjective} than her golden dress. Only her eyes were changeable and {adjective}, and, despite her words, she looked at him haughtily with them, so he thought it advisable to {action6}",
+    "On the shore of the {place} he stood looking out over the long foam-lines far where vague the Islands lifted or were guessed. There, he said to the {place}, there lies my kingdom. The {place} said to him what the {place} says to everybody. As evening moved from behind his back across the water the foam-lines paled and the wind fell, and very far in the west shone a star perhaps, perhaps a light, or his desire for a light",
+    "{name} first thought was: Its happening too fast. The {adjective} roofs descended in a paling V, vertex blurred with {things}. He stared, waiting for an eruption of {adjective} fires. But no; the arch of visible {place}, though modeled and mottled with billows, was deep {colour}, except the lowest quarter, gone {colour}"
   ],
 
   "level":[]

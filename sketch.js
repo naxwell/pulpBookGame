@@ -36,7 +36,8 @@ const CATEGORY_COLORS = {
   action7: "#be6ede",
   jewel: "#ded514",
   good: "#e8cc0b",
-  gift: "#f56de1"
+  gift: "#f56de1",
+  name: "#3abebe"
 };
 
 
