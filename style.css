@@ -93,6 +93,13 @@ canvas {
   padding: 10px;
 }
 
+ #monster {
+  border: 2px solid black;
+  padding: 20px;
+  margin: 20px;
+  white-space: pre-line;
+  }
+
 @media (max-width: 600px) {
   game {
     font-size: 16px;
@@ -157,4 +164,6 @@ canvas {
     text-shadow: none !important;
     visibility: visible !important;
   }
+
+ 
 }

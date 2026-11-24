@@ -9,35 +9,37 @@ let currentText = "";
 let currentSessionHistory = [];
 let level = []; 
 
+//character and monster stuff
+const abilities = ["Fire Breath", "Stealth", "Regeneration", "Poison Bite"];
 
 // sticky categories: once they are chosen, they remain the same for the rest of the run----
-const STICKY_CATEGORIES = ["weapon", "jewel", "deity", "gift", "groups2", "action7"];
+const STICKY_CATEGORIES = ["weapon", "jewel", "deity", "gift", "groups2", "action7", "name", "monster"];
 let lockedChoices = {};
 
 // each category and the corresponding color they will be shown in
 const CATEGORY_COLORS = {
-  adjective: "#be5abe",
-  things: "#50be78",
-  verbed: "#5a78dc",
-  verbing: "#5a78dc",
-  verb: "#5a78dc",
+  adjective: "#9C4408",
+  things: "#b65e23",
+  verbed: "#ff7700",
+  verbing: "#f5e431",
+  verb: "#ff4800",
   place: "#dc9646",
   groups: "#dc5a6e",
   groups2: "#dc5a6e",
   bad_feeling: "#dc5a6e",
-  deity: "#3abebe",
-  weapon: "#67e864",
-  action1: "#be6ede",
-  action2: "#be6ede",
-  action3: "#be6ede",
-  action4: "#be6ede",
-  action5: "#be6ede",
-  action6: "#be6ede",
-  action7: "#be6ede",
-  jewel: "#ded514",
+  deity: "#0400ff",
+  weapon: "#848884",
+  action1: "#056104",
+  action2: "#27862d",
+  action3: "#03f703",
+  action4: "#54a73d",
+  action5: "#aef269",
+  action6: "#00ff26",
+  action7: "#99d457",
+  jewel: "#b914de",
   good: "#e8cc0b",
-  gift: "#f56de1",
-  name: "#3abebe"
+  gift: "#fc31ff",
+  name: "#0080ff"
 };
 
 
@@ -221,6 +223,7 @@ function renderToHTML(text, blanks) {
 
 function renderStage() {
   document.getElementById("p").style.display = 'none';
+  document.getElementById("monster").style.display = 'none';
   const g = document.getElementById("g");
   g.innerHTML = renderToHTML(currentText, currentBlanks);
 }
@@ -271,10 +274,14 @@ document.getElementById("next").addEventListener("click", () => {
 
   
   if (stageIndex == narrative.level.length) {
+    
     document.getElementById("g").classList.remove("unselect");
     document.getElementById("g").innerHTML = finalPoem(currentSessionHistory);
     document.getElementById("next").innerHTML = "reset";
     document.getElementById("p").style.display = 'inline';
+    //document.getElementById("monster").innerHTML = JSON.stringify(generateMonster(1), null, 2);
+    document.getElementById("monster").textContent = generateMonster(3);
+    document.getElementById("monster").style.display = 'inline';
     document.getElementById("m").style.paddingTop = "10px";
     stageIndex++;
     return;
@@ -544,6 +551,8 @@ function finalPoem(session) {
       s += "<br /><br />";
     }
   });
+  
+ 
   return s;
 }
 
@@ -556,3 +565,24 @@ function magicUserBaby() {
     return true;
   }
 }
+
+function generateMonster(level = 1) {
+  const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+  
+  const monster ={
+    name: lockedChoices.name,
+    level: level,
+    hp: Math.floor((Math.random() * 20 + 30) * level),
+    attack: Math.floor((Math.random() * 5 + 5) * level),
+    ability: pick(abilities)
+    }
+
+    //const formattedText = "Name" + Object.entries(monster).map(([key, value]) => `${key}: ${value}`).join("<br>");
+    const formattedText = monster.name + "\nLevel: " + level +"\nHP:"
+
+    return formattedText
+}
+
+
+
+
