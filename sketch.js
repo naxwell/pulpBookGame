@@ -10,7 +10,7 @@ let currentSessionHistory = [];
 let level = []; 
 
 //character and monster stuff
-const abilities = ["Fire Breath", "Stealth", "Regeneration", "Poison Bite"];
+const abilities = ["Monologuing", "ear of the weird gods", "punch of instant regret", "Big Tail"];
 
 // sticky categories: once they are chosen, they remain the same for the rest of the run----
 const STICKY_CATEGORIES = ["weapon", "jewel", "deity", "gift", "groups2", "action7", "name", "monster"];
@@ -67,6 +67,7 @@ async function setup() {
   
   narrative.level = level;
   console.log(narrative.level);
+  console.log(lockedChoices.monster);
   loadStage(stageIndex);
 }
 
@@ -280,9 +281,11 @@ document.getElementById("next").addEventListener("click", () => {
     document.getElementById("next").innerHTML = "reset";
     document.getElementById("p").style.display = 'inline';
     //document.getElementById("monster").innerHTML = JSON.stringify(generateMonster(1), null, 2);
-    document.getElementById("monster").textContent = generateMonster(3);
-    document.getElementById("monster").style.display = 'inline';
     document.getElementById("m").style.paddingTop = "10px";
+    if(lockedChoices.monster !== undefined){
+      document.getElementById("monster").textContent = generateMonster(3);
+      document.getElementById("monster").style.display = 'inline';
+    }
     stageIndex++;
     return;
   }
@@ -570,7 +573,7 @@ function generateMonster(level = 1) {
   const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
   
   const monster ={
-    name: lockedChoices.name,
+    name: lockedChoices.monster,
     level: level,
     hp: Math.floor((Math.random() * 20 + 30) * level),
     attack: Math.floor((Math.random() * 5 + 5) * level),
@@ -578,7 +581,7 @@ function generateMonster(level = 1) {
     }
 
     //const formattedText = "Name" + Object.entries(monster).map(([key, value]) => `${key}: ${value}`).join("<br>");
-    const formattedText = monster.name + "\nLevel: " + level +"\nHP:"
+    const formattedText = monster.name + "\nLevel: " + monster.level +"\nHP:" + monster.hp +"\nAbility:" + monster.ability;
 
     return formattedText
 }
