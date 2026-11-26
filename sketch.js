@@ -75,26 +75,26 @@ function bookGen(){
   //Max's weird book inputs and attempts 
   const bookPassages = narrative.rawBook[Math.floor(Math.random() * narrative.rawBook.length)].split(".");
   const bookOne = narrative.rawBook[Math.floor(Math.random() * narrative.rawBook.length)].split(".");
-  const bookTwo = narrative.rawBook[Math.floor(Math.random() * narrative.rawBook.length)].split(".");
-  const bookThree = narrative.rawBook[Math.floor(Math.random() * narrative.rawBook.length)].split(".");
+  //const bookTwo = narrative.rawBook[Math.floor(Math.random() * narrative.rawBook.length)].split(".");
+  //const bookThree = narrative.rawBook[Math.floor(Math.random() * narrative.rawBook.length)].split(".");
   const passageOne = bookOne[Math.floor(Math.random() * bookOne.length)]
-  const passageTwo = bookTwo[Math.floor(Math.random() * bookTwo.length)]
-  const passageThree = bookThree[Math.floor(Math.random() * bookThree.length)]
-  if(bookTwo == bookOne){
-    bookTwo = narrative.rawBook[Math.floor(Math.random() * narrative.rawBook.length)].split(".");
-  } 
+  //const passageTwo = bookTwo[Math.floor(Math.random() * bookTwo.length)]
+  //const passageThree = bookThree[Math.floor(Math.random() * bookThree.length)]
+  // if(bookTwo == bookOne){
+  //   bookTwo = narrative.rawBook[Math.floor(Math.random() * narrative.rawBook.length)].split(".");
+  // } 
 
-  if(bookThree == bookTwo || bookThree == bookTwo){
-    bookThree = narrative.rawBook[Math.floor(Math.random() * narrative.rawBook.length)].split(".");
-  }
+  // if(bookThree == bookTwo || bookThree == bookTwo){
+  //   bookThree = narrative.rawBook[Math.floor(Math.random() * narrative.rawBook.length)].split(".");
+  // }
 
-  //console.log(passageOne);
-  //console.log(passageTwo);
-  //console.log(passageThree);
-  level.push(`${passageOne} <br /> ${passageTwo} <br /> ${passageThree}!`);
-  //console.log(level[0]);
+
+  //level.push(`${passageOne} <br /> ${passageTwo} <br /> ${passageThree}!`);
+  level.push(`${passageOne}`);
 
 }
+
+
 
 
 // parses each character of the "stage" string, finds the curly bracket, returns the contents of the curly bracket & that words position in the string and also returns the "cleaned" string with the blanks (content of curly braces) removed
@@ -322,15 +322,16 @@ const STAGE_TRANSITIONS = {
   // START TO 2 IS STATIC
   
   2: (blanks, locked) => {
-    let t = blanks[3].word;
-    //console.log(t);
-    if (t == "attack") {
-      return 4;
-    } else if (t == "flea") {
-      return 5;
-    } else {
-      return 16;
-    }
+    // let t = blanks[3].word;
+    // //console.log(t);
+    // if (t == "attack") {
+    //   return 4;
+    // } else if (t == "flea") {
+    //   return 5;
+    // } else {
+    //   return 16;
+    // }
+    return 16;
   },
 
   // we don't talk about line 3
@@ -574,14 +575,14 @@ function generateMonster(level = 1) {
   
   const monster ={
     name: lockedChoices.monster,
-    level: level,
-    hp: Math.floor((Math.random() * 20 + 30) * level),
+    HD: level,
+    hp: Math.floor((Math.random() * 10) * level),
     attack: Math.floor((Math.random() * 5 + 5) * level),
     ability: pick(abilities)
     }
 
     //const formattedText = "Name" + Object.entries(monster).map(([key, value]) => `${key}: ${value}`).join("<br>");
-    const formattedText = monster.name + "\nLevel: " + monster.level +"\nHP:" + monster.hp +"\nAbility:" + monster.ability;
+    const formattedText = monster.name + "\nLevel: " + monster.level +"\nAttack: " + monster.attack +"\nAbility: " + monster.ability;
 
     return formattedText
 }

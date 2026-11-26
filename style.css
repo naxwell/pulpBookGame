@@ -1,20 +1,21 @@
 .space-r {
-  font-family: "IM Fell English", serif;
+  font-family: "Jacquard 12", system-ui;
   font-weight: 400;
   font-style: normal;
+  width: 400px;
 }
 .space-b {
-  font-family: "IM Fell English", serif;
+  font-family: "Jacquard 12", system-ui;
   font-weight: 700;
   font-style: normal;
 }
 .space-r-i {
-  font-family: "IM Fell English", serif;
+  font-family: "Jacquard 12", system-ui;
   font-weight: 400;
   font-style: italic;
 }
 .space-b-i {
-  font-family: "IM Fell English", serif;
+  font-family: "Jacquard 12", system-ui;
   font-weight: 700;
   font-style: italic;
 }
@@ -42,7 +43,7 @@ body {
   height: 100dvh; /* accounts for mobile browser address bar showing/hiding */
   display: flex;
   flex-direction: column;
-  background: white url("https://texturelabs.org/wp-content/uploads/Texturelabs_Paper_248S.jpg") center / cover;
+  background: #111;
 }
 
 main {
@@ -58,16 +59,17 @@ main {
 }
 
 game {
-  color: #111;
+  color: #00ff00;
   display: block;
   justify-content: center;
   align-items: center;
   
-  font-size: 14px;
+  font-size: 18px;
 }
 
 #next {
   margin-top: 10px; 
+  box-shadow: 0 8px 0 -4px #000000;
 }
 
 .blank {
@@ -99,6 +101,10 @@ canvas {
   margin: 20px;
   white-space: pre-line;
   }
+
+#ascii{
+  color: #00ff00;
+}
 
 @media (max-width: 600px) {
   game {
